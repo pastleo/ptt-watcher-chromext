@@ -1,6 +1,6 @@
 import {
   CHECK_ALARM_NAME, CONTENT_STORAGE_KEY,
-  fetchPtt, openPage
+  getLastContent, fetchPtt, openPage
 } from './shared.js';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,11 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   const refreshContentLink = async () => {
-    contentLink.textContent = (
-      await new Promise(
-        r => chrome.storage.local.get([CONTENT_STORAGE_KEY], r)
-      )
-    )[CONTENT_STORAGE_KEY];
+    contentLink.textContent = await getLastContent();
   }
 
   toggleBtn.addEventListener('click', () => {
