@@ -1,16 +1,19 @@
 {
-  "name": "Getting Started Example",
+  "name": "PTT watcher",
   "version": "1.0",
   "description": "Build an Extension!",
   "permissions": ["storage", "alarms", "notifications", "https://*/"],
   "background": {
-    "scripts": ["background.js"],
+    "page": "background.html",
     "persistent": false
   },
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
     "128": "icon.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
   },
   "manifest_version": 2
 }

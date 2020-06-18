@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body { width: 300px; }
+      button#toggle { float: right; }
+      button#fetch { display: block; width: 100%; }
+    </style>
+
+    <script type='module' src='popup.js'></script>
+  </head>
+  <body>
+    <div>
+      <span id='status'></span>
+      <button id='toggle'></button>
+    </div>
+    <hr />
+    <button id='fetch'>Fetch now</button>
+    <div>
+      Last fetched: 
+      <a href='_blank' id='content'></a>
+    </div>
+  </body>
+</html>
